@@ -1,4 +1,4 @@
-class agora::apache 
+class agorabase::apache 
 {      
     package 
     { 
@@ -33,7 +33,7 @@ class agora::apache
         "/etc/apache2/sites-available/000-default.conf":
             ensure  => present,
             owner => root, group => root,
-            source  => "puppet:///modules/agora/vhost",
+            source  => "puppet:///modules/agorabase/vhost",
             require => Package['apache2'],
     }
 

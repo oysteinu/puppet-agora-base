@@ -1,4 +1,4 @@
-class agora::sql {
+class agorabase::sql {
 	class { "mysql":
     	root_password => 'mys4cr3',
   	}

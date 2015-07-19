@@ -1,4 +1,4 @@
-class agora::php
+class agorabase::php
 {
 
     $packages = [

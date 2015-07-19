@@ -1,4 +1,4 @@
-class agora::php55
+class agorabase::php55
 {
 
 	#PHP 5.5 setup 

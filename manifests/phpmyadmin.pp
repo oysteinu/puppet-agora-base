@@ -1,4 +1,4 @@
-class agora::phpmyadmin 
+class agorabase::phpmyadmin 
 {
     package 
     { 
@@ -26,7 +26,7 @@ class agora::phpmyadmin
             owner => root, group => root,
             mode => '0775',
             notify  => Service['apache2'],
-            source  => "puppet:///modules/agora/config.inc.php",
+            source  => "puppet:///modules/agorabase/config.inc.php",
             require => [Package['phpmyadmin'], Package['apache2']],
     }
 }
