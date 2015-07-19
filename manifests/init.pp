@@ -7,6 +7,6 @@ class agorabase {
 
 	class { 'composer':
   		auto_update => true,
-  		require => [ Class['agora::php'], Class['agora::php55'] ],
+  		require => [ Class['agorabase::php'], Class['agorabase::php55'] ],
 	}
 }
