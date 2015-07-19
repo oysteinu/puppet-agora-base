@@ -39,7 +39,7 @@ class agorabase::php
             ensure  => present,
             owner   => root, group => root,
             notify  => Service['apache2'],
-            content => template('agora/php.ini.erb'),
+            content => template('agorabase/php.ini.erb'),
             require => [Package['php5'], Package['apache2']],
     }
 
@@ -49,7 +49,7 @@ class agorabase::php
             ensure  => present,
             owner   => root, group => root,
             notify  => Service['apache2'],
-            content => template('agora/cli.php.ini.erb'),
+            content => template('agorabase/cli.php.ini.erb'),
             require => [Package['php5']],
     }
 
