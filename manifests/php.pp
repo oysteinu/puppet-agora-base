@@ -45,6 +45,14 @@ class agorabase::php
 
     file
     {
+        "/var/log/php/":
+            ensure  => "directory",
+            owner   => root, group => root,
+            require => [Package['php5'], Package['apache2']],
+    }
+
+    file
+    {
         "/etc/php5/cli/php.ini":
             ensure  => present,
             owner   => root, group => root,
@@ -52,5 +60,4 @@ class agorabase::php
             content => template('agorabase/cli.php.ini.erb'),
             require => [Package['php5']],
     }
-
 }
