@@ -17,7 +17,8 @@ class agorabase::php
         "php5-memcache",
         "php5-memcached",
         "php5-pgsql",
-        "php5-sqlite"
+        "php5-sqlite",
+        "php5-xsl"
     ]
 
     package
