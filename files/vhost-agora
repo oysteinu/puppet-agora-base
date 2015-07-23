@@ -6,7 +6,7 @@
 		AllowOverride None
 	</Directory>
 	
-	<Directory /var/www/agora/current>
+	<Directory /var/www/agora/current/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
