@@ -16,6 +16,7 @@ class agorabase::apache
             subscribe   => [
                 File["/etc/apache2/mods-enabled/rewrite.load"],
                 File["/etc/apache2/sites-available/000-default.conf"],
+                File["/etc/apache2/sites-available/000-dev.conf"],
                 File["/etc/apache2/conf-enabled/phpmyadmin.conf"]
             ],
     }
