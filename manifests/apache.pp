@@ -16,7 +16,6 @@ class agorabase::apache
             subscribe   => [
                 File["/etc/apache2/mods-enabled/rewrite.load"],
                 File["/etc/apache2/sites-available/000-default.conf"],
-                File["/etc/apache2/sites-available/000-dev.conf"],
                 File["/etc/apache2/conf-enabled/phpmyadmin.conf"]
             ],
     }
@@ -26,15 +25,6 @@ class agorabase::apache
         "/etc/apache2/mods-enabled/rewrite.load":
             ensure  => link,
             target  => "/etc/apache2/mods-available/rewrite.load",
-            require => Package['apache2'],
-    }
-
-    file 
-    { 
-        "/etc/apache2/sites-available/000-default.conf":
-            ensure  => present,
-            owner => root, group => root,
-            source  => "puppet:///modules/agorabase/vhost",
             require => Package['apache2'],
     }
 
