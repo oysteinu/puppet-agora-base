@@ -1,12 +1,12 @@
 <VirtualHost *:80>
-	DocumentRoot /var/www/
+	DocumentRoot /var/www/agora/current/
 	
 	<Directory />
 		Options FollowSymLinks
 		AllowOverride None
 	</Directory>
 	
-	<Directory /var/www/>
+	<Directory /var/www/agora/current/>
 		Options Indexes FollowSymLinks MultiViews
 		AllowOverride All
 		Order allow,deny
