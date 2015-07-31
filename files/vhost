@@ -1,17 +1,16 @@
 <VirtualHost *:80>
 	DocumentRoot /var/www/agora/current/
 	
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride None
-	</Directory>
-	
-	<Directory /var/www/agora/current/>
-		Options Indexes FollowSymLinks MultiViews
-		AllowOverride All
-		Order allow,deny
-		allow from all
-	</Directory>
+	RewriteEngine off
+ 
+    <Location />
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} -s [OR]
+        RewriteCond %{REQUEST_FILENAME} -l [OR]
+        RewriteCond %{REQUEST_FILENAME} -d
+        RewriteRule ^.*$ - [NC,L]
+        RewriteRule ^.*$ /index.php [NC,L]
+    </Location>
 
 	ErrorLog /var/log/apache2/error.log
 	LogLevel warn
