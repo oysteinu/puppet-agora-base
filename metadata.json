@@ -4,9 +4,9 @@
   "author": "Øystein Ulseth",
   "summary": "Apache, Mysql, PHP",
   "license": "Apache 2.0",
-  "source": "https://github.com/oysteinu/puppet-agora-base",
-  "project_page": "https://github.com/oysteinu/puppet-agora-base",
-  "issues_url": "https://github.com/oysteinu/puppet-agora-base/issues",
+  "source": "https://github.com/sikkerhetenselv/puppet-agora-base",
+  "project_page": "https://github.com/sikkerhetenselv/puppet-agora-base",
+  "issues_url": "https://github.com/sikkerhetenselv/puppet-agora-base/issues",
   
   "dependencies": [
     { "name": "puppetlabs-stdlib", "version_requirement" : ">= 1.0.0" },
