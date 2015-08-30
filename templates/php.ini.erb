@@ -1679,42 +1679,13 @@ mssql.secure_connection = Off
 ;com.code_page=
 
 [mbstring]
-; language for internal character representation.
-; http://php.net/mbstring.language
-;mbstring.language = Japanese
-
-; internal/script encoding.
-; Some encoding cannot work as internal encoding.
-; (e.g. SJIS, BIG5, ISO-2022-*)
-; http://php.net/mbstring.internal-encoding
-;mbstring.internal_encoding = EUC-JP
-
-; http input encoding.
-; http://php.net/mbstring.http-input
-;mbstring.http_input = auto
-
-; http output encoding. mb_output_handler must be
-; registered as output buffer to function
-; http://php.net/mbstring.http-output
-;mbstring.http_output = SJIS
-
-; enable automatic encoding translation according to
-; mbstring.internal_encoding setting. Input chars are
-; converted to internal encoding by setting this to On.
-; Note: Do _not_ use automatic encoding translation for
-;       portable libs/applications.
-; http://php.net/mbstring.encoding-translation
-;mbstring.encoding_translation = Off
-
-; automatic encoding detection order.
-; auto means
-; http://php.net/mbstring.detect-order
-;mbstring.detect_order = auto
-
-; substitute_character used when character cannot be converted
-; one from another
-; http://php.net/mbstring.substitute-character
-;mbstring.substitute_character = none;
+mbstring.language = Neutral   ; Set default language to Neutral(UTF-8) (default)
+mbstring.internal_encoding = UTF-8 ; Set default internal encoding to UTF-8
+mbstring.encoding_translation = On  ;  HTTP input encoding translation is enabled
+mbstring.http_input = auto
+mbstring.http_output = UTF-8
+mbstring.detect_order = auto
+mbstring.substitute_character = none;
 
 ; overload(replace) single byte functions by mbstring functions.
 ; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
