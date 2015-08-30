@@ -1,5 +1,5 @@
 class agorabase::sql {
 	class { "mysql":
-    	root_password => 'ulseth1',
+    	root_password => 'auto',
   	}
 }
