@@ -8,8 +8,7 @@ class agorabase::sql {
         "/etc/mysql/conf.d/utf8_charset.cnf":
             ensure  => present,
             owner => root, group => root,
-            mode => '0775',
-            notify  => Service['mysql'],
+            mode => '0775',            
             source  => "puppet:///modules/agorabase/utf8_charset.cnf",
             require => Class["mysql"],
     }
