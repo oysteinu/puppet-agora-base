@@ -13,7 +13,6 @@ class agorabase::php
         "php5-imagick",
         "php5-curl",
         "libapache2-mod-php5",
-        "php5-xdebug",
         "php5-memcache",
         "php5-memcached",
         "php5-pgsql",
@@ -26,6 +25,10 @@ class agorabase::php
         $packages:
             ensure  => latest,
             require => [Exec['apt-get update'], Package['python-software-properties']]
+    }
+
+    package { "php5-xdebug":
+      ensure => absent,
     }
 
     # exec
