@@ -31,12 +31,6 @@ class agorabase::php
       ensure => absent,
     }
 
-    # exec
-    # {
-    #     "sed -i 's|#|//|' /etc/php5/cli/conf.d/mcrypt.ini":
-        #     require => Package['php5'],
-    # }
-
     file
     {
         "/etc/php5/apache2/php.ini":
