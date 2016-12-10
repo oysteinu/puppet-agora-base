@@ -1,6 +1,5 @@
 class agorabase::php
 {
-
     $packages = [
         "php5",
         "php5-cli",
