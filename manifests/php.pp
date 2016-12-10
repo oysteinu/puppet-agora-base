@@ -1,6 +1,5 @@
 class agorabase::php
 {
-
     $packages = [
         "php5",
         "php5-cli",
@@ -21,44 +20,13 @@ class agorabase::php
         "php5-xsl"
     ]
 
-    package
-    {
-        $packages:
-            ensure  => latest,
-            require => [Exec['apt-get update'], Package['python-software-properties']]
-    }
-
-    # exec
-    # {
-    #     "sed -i 's|#|//|' /etc/php5/cli/conf.d/mcrypt.ini":
-        #     require => Package['php5'],
-    # }
-
-    file
-    {
-        "/etc/php5/apache2/php.ini":
-            ensure  => present,
-            owner   => root, group => root,
-            notify  => Service['apache2'],
-            content => template('agorabase/php.ini.erb'),
-            require => [Package['php5'], Package['apache2']],
-    }
-
-    file
-    {
-        "/var/log/php/":
-            ensure  => "directory",
-            owner   => root, group => root,
-            require => [Package['php5'], Package['apache2']],
-    }
-
-    file
-    {
-        "/etc/php5/cli/php.ini":
-            ensure  => present,
-            owner   => root, group => root,
-            notify  => Service['apache2'],
-            content => template('agorabase/cli.php.ini.erb'),
-            require => [Package['php5']],
+    class { '::php':
+      ensure       => latest,
+      manage_repos => true,
+      fpm          => true,
+      dev          => true,
+      composer     => true,
+      pear         => true,
+      phpunit      => false,
     }
 }
