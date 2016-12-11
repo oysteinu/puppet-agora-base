@@ -31,6 +31,7 @@ class agorabase::php
 
       extensions => {
         curl  => { },
+        xsl => { },
       },
     }
 }
