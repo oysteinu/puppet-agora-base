@@ -1,17 +1,17 @@
-class agorabase::phpmyadmin 
+class agorabase::phpmyadmin
 {
-    package 
-    { 
+    package
+    {
         "phpmyadmin":
             ensure  => present,
             require => [
                 Exec['apt-get update'],
-                Package["php5", "php5-mysql", "apache2"],
+                Package["apache2"],
             ]
     }
-  
-    file 
-    { 
+
+    file
+    {
         "/etc/apache2/conf-enabled/phpmyadmin.conf":
             ensure => link,
             target => "/etc/phpmyadmin/apache.conf",
@@ -19,8 +19,8 @@ class agorabase::phpmyadmin
             notify => Service["apache2"]
     }
 
-    file 
-    { 
+    file
+    {
         "/etc/phpmyadmin/config.inc.php":
             ensure  => present,
             owner => root, group => root,
