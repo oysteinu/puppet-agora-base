@@ -4,7 +4,7 @@ class agorabase::apache
     {
         "apache2":
             ensure  => present,
-            require => [Exec['apt-get update'], Package['::php']]
+            require => [Exec['apt-get update']]
     }
 
     service
