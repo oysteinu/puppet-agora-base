@@ -30,9 +30,6 @@ class agorabase::php
       phpunit      => false,
 
       extensions => {
-        cli   => { },
-        mysql => { },
-        pear  => { },
         curl  => { },
       },
     }
