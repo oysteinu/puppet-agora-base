@@ -1,5 +1,4 @@
 class agorabase {
-	include agorabase::php55 #specific setup steps for 5.5
 	include agorabase::php
 	include agorabase::apache
 	include agorabase::sql
@@ -7,6 +6,6 @@ class agorabase {
 
 	class { 'composer':
   		auto_update => true,
-  		require => [ Class['agorabase::php'], Class['agorabase::php55'] ],
+  		require => [ Class['agorabase::php'] ],
 	}
 }
