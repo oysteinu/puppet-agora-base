@@ -28,5 +28,12 @@ class agorabase::php
       composer     => true,
       pear         => true,
       phpunit      => false,
+
+      extensions => {
+        cli   => { },
+        mysql => { },
+        pear  => { },
+        curl  => { },
+      },
     }
 }
