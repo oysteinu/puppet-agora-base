@@ -20,8 +20,10 @@ class agorabase::php
         "php5-xsl"
     ]
 
+    class { '::php::globals':
+      php_version => '5.6',
+    }->
     class { '::php':
-      ensure       => latest,
       manage_repos => true,
       fpm          => true,
       dev          => true,
