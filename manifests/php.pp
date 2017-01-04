@@ -8,6 +8,12 @@ class agorabase::php
       composer     => true,
       pear         => true,
       phpunit      => false,
+
+      extensions => {
+        curl  => { },
+        xsl => { },
+        mcrypt => { },
+      },
     }
 
     package { 'php-curl':
