@@ -4,7 +4,7 @@ class agorabase::php
       ensure       => latest,
       manage_repos => true,
       fpm          => true,
-      dev          => true,
+      dev          => false,
       composer     => true,
       pear         => true,
       phpunit      => false,
@@ -13,7 +13,6 @@ class agorabase::php
         curl  => { },
         xsl => { },
         mcrypt => { },
-        zip => { },
       },
     }
 }
