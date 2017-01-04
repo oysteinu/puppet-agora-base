@@ -25,12 +25,7 @@ class agorabase::php
       ensure => 'latest',
       require => Class['::php'],
     }
-
-    package { 'php-xsl':
-      ensure => 'latest',
-      require => Class['::php'],
-    }
-
+    
     package { 'php-mcrypt':
       ensure => 'latest',
       require => Class['::php'],
