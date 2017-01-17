@@ -25,8 +25,13 @@ class agorabase::php
       ensure => 'latest',
       require => Class['::php'],
     }
-    
-    package { 'php-mcrypt':
+
+    package { 'php7.0-mcrypt':
+      ensure => 'latest',
+      require => Class['::php'],
+    }
+
+    package { 'php-mysql':
       ensure => 'latest',
       require => Class['::php'],
     }
