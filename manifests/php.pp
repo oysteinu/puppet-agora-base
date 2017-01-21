@@ -7,7 +7,7 @@ class agorabase::php
     class { '::php':
       ensure       => latest,
       manage_repos => true,
-      fpm          => true,
+      fpm          => false,
       dev          => false,
       composer     => true,
       pear         => true,
