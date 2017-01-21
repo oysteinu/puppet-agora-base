@@ -17,26 +17,8 @@ class agorabase::php
         curl  => { },
         xsl => { },
         mcrypt => { },
+        mbstring => { },
+        mysql => { },
       },
-    }
-
-    package { 'php-curl':
-      ensure => 'latest',
-      require => Class['::php'],
-    }
-
-    package { 'php-mbstring':
-      ensure => 'latest',
-      require => Class['::php'],
-    }
-
-    package { 'php7.0-mcrypt':
-      ensure => 'latest',
-      require => Class['::php'],
-    }
-
-    package { 'php-mysql':
-      ensure => 'latest',
-      require => Class['::php'],
     }
 }
