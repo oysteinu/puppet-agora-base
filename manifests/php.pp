@@ -9,7 +9,7 @@ class agorabase::php
       manage_repos => true,
       fpm          => true,
       dev          => false,
-      composer     => true,
+      composer     => false,
       pear         => true,
       phpunit      => false,
 
