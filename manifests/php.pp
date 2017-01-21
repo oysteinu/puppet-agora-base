@@ -19,6 +19,8 @@ class agorabase::php
         mcrypt => { },
         mbstring => { },
         mysql => { },
+        gd => { },
+        imagick => { },
       },
     }
 }
