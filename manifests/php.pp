@@ -23,4 +23,8 @@ class agorabase::php
         imagick => { },
       },
     }
+
+    package { "php-mysql":
+        ensure => present,
+    }
 }
